@@ -1,0 +1,57 @@
+CREATE TABLE library (
+address CHAR(100),
+name CHAR(50),
+PRIMARY KEY (name) );
+CREATE TABLE customers (
+CID INT,
+name CHAR (50),
+address CHAR (100),
+tel INT,
+PRIMARY KEY (CID);
+CREATE TABLE items (
+IID INT,
+type CHAR (20),
+name CHAR(70),
+author CHAR (50),
+year INT,
+maxNOloans INT,
+reservable CHAR (3),
+homelib CHAR(50),
+PRIMARY KEY (IID) );
+CREATE TABLE loans (
+loanID INT,
+IID INT,
+CID INT,
+Sdate DATE,
+Ddate DATE,
+PRIMARY KEY (loandID) );
+CREATE TABLE reserve (
+RID INT,
+CID INT,
+IID INT,
+DelivLib CHAR (50),
+resdate DATE,
+PRIMARY KEY (RID) );
+CREATE TABLE fee (
+reason CHAR (50),
+transactionID INT,
+amount FLOAT,
+status CHAR(40),
+PRIMARY KEY (reason, transaction ID) );
+CREATE TABLE return (
+loanID INT,
+retdate DATE,
+retlib CHAR (50),
+itemsstatus (
+IID INT,
+availability BOOLEAN,
+PRIMARY KEY (IID) );
+transport(
+transID INT,
+IID INT,
+trdate DATE,
+from CHAR (50),
+to CHAR (50),
+PRIMARY KEY (trID) );
+
+
