@@ -8,7 +8,8 @@ CID INT,
 name CHAR (50),
 address CHAR (100),
 tel INT,
-PRIMARY KEY (CID);
+PRIMARY KEY (CID)
+);
 CREATE TABLE items(
 IID INT,
 available BOOLEAN,
@@ -19,8 +20,9 @@ year INT,
 maxNOloans INT,
 loanduration INT,
 reservable BOOLEAN,
-homelib CHAR(50) CHECK (homelib IN (SELECT name FROM library)),
-PRIMARY KEY (IID) );
+homelib CHAR(50) REFERENCES library(homelib),
+PRIMARY KEY (IID) 
+);
 CREATE TABLE loans (
 loanID INT,
 IID INT REFERENCES items(IID),
@@ -41,23 +43,11 @@ reason CHAR (20),
 transactionID INT,
 amount FLOAT,
 status CHAR(40) CHECK(status IN ('paid','pending')),
-PRIMARY KEY (reason, transaction ID) 
+PRIMARY KEY (reason, transactionID) 
 );
-CREATE TABLE return (
+CREATE TABLE ret (
 loanID INT REFERENCES loans(loanID),
 retdate DATE,
-retlib CHAR (50) CHECK retlib IN ((SELECT name FROM library)),
-itemsstatus (
-IID INT,
-availability BOOLEAN,
-PRIMARY KEY (IID)
+retlib CHAR (50) REFERENCES library(retlib),
+PRIMARY KEY (loanID)
 );
-transport(
-transID INT,
-IID INT,
-trdate DATE,
-from CHAR (50),
-to CHAR (50),
-PRIMARY KEY (trID) );
-
-
