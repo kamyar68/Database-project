@@ -29,13 +29,15 @@ IID INT REFERENCES items(IID),
 CID INT REFERENCES customers(CID),
 Sdate DATE,
 Ddate DATE,
-PRIMARY KEY (loanID) );
+PRIMARY KEY (loanID) 
+);
 CREATE TABLE reserve (
 RID INT,
 CID INT REFERENCES customers(CID),
 IID INT INT REFERENCES items(IID),
 DelivLib CHAR (50),
 resdate DATE,
+quepos INT,
 PRIMARY KEY (RID) 
 );
 CREATE TABLE fee (
