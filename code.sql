@@ -12,6 +12,7 @@ PRIMARY KEY (CID)
 );
 CREATE TABLE items(
 IID INT,
+GID INT,
 available BOOLEAN,
 type CHAR (20),
 name CHAR(70),
@@ -34,7 +35,7 @@ PRIMARY KEY (loanID)
 CREATE TABLE reserve (
 RID INT,
 CID INT REFERENCES customers(CID),
-IID INT INT REFERENCES items(IID),
+GID INT,
 DelivLib CHAR (50),
 resdate DATE,
 quepos INT,
