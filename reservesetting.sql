@@ -26,8 +26,8 @@ end;
 create Trigger quteTOloan
 after update of quepos on reserve
 for each row
-when ((select qupos from reserve)=0)
+when (((select qupos from reserve)=0) and (select available from items where IID=NEW.IID))
 begin
 delete from reserve where RID= (select RID from reserve where quepos=0;)
-insert into loans ((111111;, new.IID,NEW.CID,'date';,1111111);
+insert into loans ((111111, new.IID,NEW.CID,'date';,1111111);
 end;

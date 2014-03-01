@@ -37,7 +37,7 @@ CID INT REFERENCES customers(CID),
 IID INT INT REFERENCES items(IID),
 DelivLib CHAR (50),
 resdate DATE,
-quepos INT check,
+quepos INT,
 PRIMARY KEY (RID) 
 );
 CREATE TABLE fee (
