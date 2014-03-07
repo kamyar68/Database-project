@@ -17,10 +17,4 @@ update loans set loanID=((Select count (*) from loans)+1) where CID=NEW.CID and 
 update items set available= FALSE where items.IID=NEW.IID;
 end;
 
-/* Create trigger loansetting3
-after insert on loans
-for each row
-WHEN ((Select available from items where items.IID=NEW.IID) AND (exists(Select * from reserve where reserve.CID= NEW.CID and reserve.IID=NEW.IID)))
-begin
-delete from reserve where (select GID from items where IID=NEW.IID)= NEW.GID AND CID=NEW.CID;
-end; */
+

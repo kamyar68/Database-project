@@ -14,10 +14,10 @@ CREATE TABLE items(
 IID INT,
 GID INT,
 available BOOLEAN,
-type CHAR (20),
+item_type CHAR (20),
 name CHAR(70),
 author CHAR (50),
-year INT,
+item_year INT,
 maxNOloans INT,
 loanduration INT,
 reservable BOOLEAN,
@@ -43,12 +43,12 @@ PRIMARY KEY (RID)
 );
 CREATE TABLE fee (
 reason CHAR (20),
-transactionID INT,
+transID INT,
 amount FLOAT,
 status CHAR(40) CHECK(status IN ('paid','pending')),
-PRIMARY KEY (reason, transactionID) 
+PRIMARY KEY (reason, transID) 
 );
-CREATE TABLE ret (
+CREATE TABLE returning (
 loanID INT REFERENCES loans(loanID),
 retdate DATE,
 retlib CHAR (50) REFERENCES library(retlib),
