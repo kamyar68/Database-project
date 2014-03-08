@@ -1,6 +1,7 @@
 CREATE TABLE library (
 address CHAR(100),
 name CHAR(50),
+tel char(20),
 PRIMARY KEY (name) 
 );
 CREATE TABLE customers (

@@ -1,5 +1,5 @@
 create trigger ret1
-after insert on ret
+after insert on returning
 for each row
 begin
 update ret set retdate=(SELECT date('now')) where loanID=NEW.loanID;
@@ -8,7 +8,7 @@ end;
 
 
 create trigger ret2
-after insert on ret
+after insert on returning
 for each row
 when(((SELECT date('now')) - (select Sdate from loans where loanID=NEW.loanID))> (select loanduration from items where IID=(select IID from loans where loanID=NEW.loanID)))
 begin
