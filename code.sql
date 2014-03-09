@@ -1,6 +1,6 @@
 CREATE TABLE library (
-address CHAR(100),
 name CHAR(50),
+address CHAR(100),
 tel char(20),
 PRIMARY KEY (name) 
 );
@@ -8,7 +8,7 @@ CREATE TABLE customers (
 CID INT,
 name CHAR (50),
 address CHAR (100),
-tel INT,
+tel char(20),
 PRIMARY KEY (CID)
 );
 CREATE TABLE items(
@@ -19,7 +19,6 @@ item_type CHAR (20),
 name CHAR(70),
 author CHAR (50),
 item_year INT,
-maxNOloans INT,
 loanduration INT,
 reservable BOOLEAN,
 homelib CHAR(50) REFERENCES library(homelib),
