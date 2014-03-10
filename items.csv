@@ -1,13 +1,13 @@
 2166,1,TRUE,book,A History of Historical Writing,Tegan Arceo,1951,25,FALSE,Lauttasaari Library  
-2083,2,TRUE,book,A Season on the Earth: Selected Poems,Erick Nievas,1933,0,FALSE,Hiekkaharju Library
-2035,3,TRUE,book,A Short History of Scientific Ideas to 1900,LeoFALSEra Mauson,1943,0,FALSE,Entresse Library  
+2083,2,TRUE,book,A Season on the Earth: Selected Poems,Erick Nievas,1933,14,FALSE,Hiekkaharju Library
+2035,3,TRUE,book,A Short History of Scientific Ideas to 1900,LeoFALSEra Mauson,1943,14,FALSE,Entresse Library  
 2037,4,TRUE,cd,Aeneid,Tarra Nachor,1970,25,TRUE,Entresse Library  
 2147,5,TRUE,book,An Account of My Hut,Josphine Villanueva,1971,25,TRUE,Lauttasaari Library  
-2138,5,TRUE,book,An Account of My Hut,Josphine Villanueva,1972,0,FALSE,Kauniainen library 
-2175,5,TRUE,book,An Account of My Hut,Josphine Villanueva,1971,0,FALSE,Lauttasaari Library  
-2017,6,TRUE,journal,Anabasis,Lilli Scriven,1959,0,FALSE,Arabianranta Library
+2138,5,TRUE,book,An Account of My Hut,Josphine Villanueva,1972,14,FALSE,Kauniainen library 
+2175,5,TRUE,book,An Account of My Hut,Josphine Villanueva,1971,14,FALSE,Lauttasaari Library  
+2017,6,TRUE,journal,Anabasis,Lilli Scriven,1959,14,FALSE,Arabianranta Library
 2193,7,TRUE,cd,Analects,Carlee Boulter,1973,25,TRUE,Malmi Library 
-2088,8,TRUE,book,Anna Karenina,Truman Feichtner,1914,0,FALSE,Hiekkaharju Library
+2088,8,TRUE,book,Anna Karenina,Truman Feichtner,1914,14,FALSE,Hiekkaharju Library
 2005,9,TRUE,cd,Annals. Histories,Renea Monterrubio,1968,25,TRUE,Arabianranta Library
 2188,10,TRUE,cd,Anthology of Chinese Literature,Loren Asar,1906,25,TRUE,Library Apple 
 2001,12,TRUE,book,Apology. Crito. Phaedo,Felix Hirpara,1979,25,TRUE,Arabianranta Library
@@ -20,17 +20,17 @@
 2200,19,TRUE,book,Chin P'ing Mei,Flo Bookamer,1958,25,TRUE,Saunalahti Library 
 2158,20,TRUE,book,Chinese Poems,Alline Jeanty,1984,25,TRUE,Lauttasaari Library  
 2154,21,TRUE,book,Chushingura,Lonna Diestel,1985,25,TRUE,Lauttasaari Library  
-2085,22,TRUE,cd,Classical Literary Criticism (Aristotle: On the Art of Poetry. Horace: On the Art of Poetry. Longinus: On the Sublime),Mitsue Scipione,1927,0,FALSE,Hiekkaharju Library
+2085,22,TRUE,cd,Classical Literary Criticism (Aristotle: On the Art of Poetry. Horace: On the Art of Poetry. Longinus: On the Sublime),Mitsue Scipione,1927,14,FALSE,Hiekkaharju Library
 2179,23,TRUE,cd,Collected Stories,Glory Schieler,1917,25,TRUE,Lauttasaari Library  
 2098,24,TRUE,journal,Collected Works,Annelle Tagala,1936,25,TRUE,Hiekkaharju Library
-2032,25,TRUE,journal,Comedies,Jutta Amyot,1929,0,FALSE,Entresse Library  
+2032,25,TRUE,journal,Comedies,Jutta Amyot,1929,14,FALSE,Entresse Library  
 2139,26,TRUE,book,Comedies Mine,Joanna Leinenbach,1904,25,TRUE,Kauniainen library 
 2146,27,TRUE,cd,Complete Guide to Stories,Jeanice Claucherty,1999,25,TRUE,Lauttasaari Library  
 2031,28,TRUE,journal,Complete Paradise,Leota Ragel,1911,25,TRUE,Entresse Library  
 2008,29,TRUE,book,Complete Poems,Christiane Eschberger,1936,25,TRUE,Arabianranta Library
 2016,29,TRUE,book,Complete Poems,Christiane Eschberger,1936,25,TRUE,Arabianranta Library
 2070,30,TRUE,cd,Complete Poetry,Wynell Dorshorst,1931,25,TRUE,Hakunila Library 
-2107,31,TRUE,book,Confessions,Tasia Andreason,1961,0,FALSE,Kallio Library 
+2107,31,TRUE,book,Confessions,Tasia Andreason,1961,14,FALSE,Kallio Library 
 2177,32,TRUE,book,Crime and Punishment,Diane Devreese,1989,25,TRUE,Lauttasaari Library  
 2190,32,TRUE,book,Crime and Punishment,Diane Devreese,1989,25,TRUE,Library Apple 
 2194,32,TRUE,book,Crime and Punishment,Diane Devreese,2005,25,TRUE,Malmi Library 
@@ -41,13 +41,13 @@
 2027,38,TRUE,book,Doctor Zhivago,Justine Ferrario,2003,25,TRUE,Entresse Library  
 2091,39,TRUE,journal,Don Carlos,Gertude Witten,1960,25,TRUE,Hiekkaharju Library
 2178,40,TRUE,book,Essays of Elia. Last essays of Elia,Roslyn Chavous,1944,25,TRUE,Lauttasaari Library  
-2153,41,TRUE,book,Eugene Onegin,Gilma Liukko,1921,0,FALSE,Lauttasaari Library  
+2153,41,TRUE,book,Eugene Onegin,Gilma Liukko,1921,14,FALSE,Lauttasaari Library  
 2185,41,TRUE,book,Eugene Onegin,Gilma Liukko,1996,25,TRUE,Library Apple 
 2191,42,TRUE,cd,Eugene Onegin,Catalina Tillotson,1904,25,TRUE,Malmi Library 
 2181,43,TRUE,cd,Fathers and Children,Alpha Palaia,1988,25,TRUE,Lauttasaari Library  
 2076,44,TRUE,cd,Fictions. Labyrinths. The Aleph and Other Stories,Zona Colla,1924,25,TRUE,Hakunila Library 
-2038,45,TRUE,book,Five German Tragedies,Corinne Loder,1997,0,FALSE,Entresse Library  
-2068,46,TRUE,cd,Five Plays,Linn Paa,1960,0,FALSE,Hakunila Library 
+2038,45,TRUE,book,Five German Tragedies,Corinne Loder,1997,20,FALSE,Entresse Library  
+2068,46,TRUE,cd,Five Plays,Linn Paa,1960,20,FALSE,Hakunila Library 
 2105,46,TRUE,cd,Five Plays,Linn Paa,1967,25,FALSE,Kallio Library 
 2078,47,TRUE,cd,Four Plays,Linn Paa,2010,25,TRUE,Hakunila Library 
 2182,48,TRUE,book,Ghazals of Ghalib: Versions from the Urdu,Refugia Jacobos,1965,25,TRUE,Lauttasaari Library  
@@ -57,17 +57,16 @@
 2073,52,TRUE,book,Histories,Sheron Louissant,1912,25,TRUE,Hakunila Library 
 2123,53,TRUE,book,Iliad,Catarina Gleich,1958,25,TRUE,Kauniainen library 
 2065,54,TRUE,book,Journey to the Alcarria,Maile Linahan,1946,25,TRUE,Hakunila Library 
-2164,55,TRUE,book,Jude the Obscure,Nan Koppinger,1979,0,FALSE,Lauttasaari Library  
+2164,55,TRUE,book,Jude the Obscure,Nan Koppinger,1979,20,FALSE,Lauttasaari Library  
 2126,56,TRUE,book,Kathasaritsagara,Keneth Borgman,1983,25,TRUE,Kauniainen library 
 2184,57,TRUE,book,Kukai and His Major Works,Mona Delasancha,1927,25,TRUE,Library Apple 
 2029,58,TRUE,journal,Letters,Derick Dhamer,1921,25,TRUE,Entresse Library  
-2077,59,TRUE,book,Letters from a Stoic,Serina Zagen,1923,0,FALSE,Hakunila Library 
+2077,59,TRUE,book,Letters from a Stoic,Serina Zagen,1923,20,FALSE,Hakunila Library 
 2009,60,TRUE,cd,Letters. Historia Calamitatum of Abelard,Goldie Schirpke,1969,25,TRUE,Arabianranta Library
 2129,61,TRUE,journal,Leyla and Mejnun,Hoa Sarao,2012,25,TRUE,Kauniainen library 
 2148,62,TRUE,book,Life Is a Dream,Daniel Perruzza,1965,25,TRUE,Lauttasaari Library  
 2162,62,TRUE,book,Life Is a Dream,Daniel Perruzza,1943,25,TRUE,Lauttasaari Library  
-2044,63,TRUE,book,Lives of the Most Eminent Painters,,,,,
-2019,64,TRUE,book,Madame Bovary,Barbra Adkin,1995,25,TRUE,Arabianranta Library
+22019,64,TRUE,book,Madame Bovary,Barbra Adkin,1995,25,TRUE,Arabianranta Library
 2109,65,TRUE,cd,Major Plays,Arthur Farrow,1989,25,TRUE,Kallio Library 
 2112,65,TRUE,cd,Major Plays,Arthur Farrow,1920,25,FALSE,Kallio Library 
 2124,65,TRUE,cd,Major Plays,Arthur Farrow,1929,25,FALSE,Kauniainen library 
@@ -75,20 +74,17 @@
 2058,67,TRUE,book,Medieval Literature in Translation,Audry Yaw,1961,25,TRUE,Entresse Library  
 2156,68,TRUE,book,Memoirs of a Good-for-FALSEthing,Kenneth Grenet,1906,25,TRUE,Lauttasaari Library  
 2168,69,TRUE,cd,Miguel Leon-Portilla's Aztec Thought and Culture. Michael D. Coe's Mexico. Jacques Soustelle'sThe Daily Life of the Aztecs,Joni Breland,1962,25,TRUE,Lauttasaari Library  
-2104,70,TRUE,book,Moby Dick,,,,,
-2042,71,TRUE,journal,Modern Arab Poets,,,,,
 2051,72,TRUE,book,Monkey or The Journey to the West,Samira Heintzman,1977,25,TRUE,Entresse Library  
-2130,73,TRUE,book,Narrative of Travels in Europe,,,,,
 2137,74,TRUE,book,Nausea,Ahmed Angalich,1980,25,TRUE,Kauniainen library 
 2176,75,TRUE,book,Nichomachean Ethics,Gary Nunlee,2013,25,TRUE,Lauttasaari Library  
-2120,76,TRUE,book,FALSEtebooks,Lynelle Auber,2001,0,FALSE,Kallio Library 
+2120,76,TRUE,book,FALSEtebooks,Lynelle Auber,2001,20,FALSE,Kallio Library 
 2054,77,TRUE,book,Oblivion,Weldon Acuff,2009,25,TRUE,Entresse Library  
 2149,78,TRUE,cd,Oblomov,Cassi Wildfong,1975,25,TRUE,Lauttasaari Library  
 2151,79,TRUE,book,Oblomov,Adell Lipkin,1901,25,TRUE,Lauttasaari Library  
 2174,79,TRUE,book,Oblomov,Adell Lipkin,1982,25,TRUE,Lauttasaari Library  
 2111,80,TRUE,book,Odyssey,Billye Miro,1966,25,TRUE,Kallio Library 
 2047,81,TRUE,book,On the Origin of Species by Means of Natural Selection,Lashaunda Lizama,1952,25,TRUE,Entresse Library  
-2183,82,TRUE,book,One Day in the Life of Ivan Denisovich,Shawnda Yori,2008,0,FALSE,Library Apple 
+2183,82,TRUE,book,One Day in the Life of Ivan Denisovich,Shawnda Yori,2008,20,FALSE,Library Apple 
 2072,83,TRUE,book,One Hundred Years of Solitude,Regenia Kannady,1903,25,FALSE,Hakunila Library 
 2075,84,TRUE,cd,Panchatantra,Rodolfo Butzen,1975,25,TRUE,Hakunila Library 
 2069,85,TRUE,book,Philosophical and Miscellaneous Essays,Paris Wide,1992,25,TRUE,Hakunila Library 
@@ -103,10 +99,10 @@
 2056,94,TRUE,book,Poems Cook,Denise Patak,1974,25,TRUE,Entresse Library  
 2060,95,TRUE,journal,Poems Lu,Vincenza Zepp,1928,25,TRUE,Entresse Library  
 2053,96,TRUE,book,Poems Pushkin,Kristofer Bennick,1987,25,TRUE,Entresse Library  
-2103,97,TRUE,journal,Poems Reader,Cordelia Storment,1996,0,FALSE,Kallio Library 
+2103,97,TRUE,journal,Poems Reader,Cordelia Storment,1996,20,FALSE,Kallio Library 
 2025,98,TRUE,book,Poems. Stories. The Lovely Years,Lorean MartabaFALSE,1904,25,TRUE,Entresse Library  
 2199,99,TRUE,journal,Poetical Works,Raylene Kampa,1998,25,TRUE,Saunalahti Library 
-2113,100,TRUE,book,Politics,Mitzie Hudnall,1905,0,FALSE,Kallio Library 
+2113,100,TRUE,book,Politics,Mitzie Hudnall,1905,20,FALSE,Kallio Library 
 2189,101,TRUE,journal,Pride and Prejudice,Dorothy Chesterfield,1965,25,TRUE,Library Apple 
 2024,102,TRUE,journal,Records of the Grand Historian of China,Helaine Halter,1911,25,TRUE,Entresse Library  
 2145,103,TRUE,journal,Rihla (Travels in Asia and Africa),Cecil Lapage,1931,25,TRUE,Lauttasaari Library  
@@ -116,15 +112,15 @@
 2006,107,TRUE,book,Selected Poems,Olive Matuszak,2004,25,TRUE,Arabianranta Library
 2086,107,TRUE,book,Selected Poems,Olive Matuszak,1916,25,TRUE,Hiekkaharju Library
 2116,107,TRUE,book,Selected Poems,Olive Matuszak,1968,25,TRUE,Kallio Library 
-2127,108,TRUE,book,Selected Poems,Rikki Nayar,1986,0,FALSE,Kauniainen library 
+2127,108,TRUE,book,Selected Poems,Rikki Nayar,1986,20,FALSE,Kauniainen library 
 2134,108,TRUE,book,Selected Poems,Rikki Nayar,1972,25,TRUE,Kauniainen library 
 2163,108,TRUE,book,Selected Poems,Rikki Nayar,1958,25,TRUE,Lauttasaari Library  
 2093,109,TRUE,journal,Selected Prose. Poems and Verse Plays. Selected Plays and Libretti,Glenn Berray,1920,25,TRUE,Hiekkaharju Library
 2195,110,TRUE,book,Selected Works of Gogoole,Jovita Oles,1990,25,TRUE,Malmi Library 
 2034,111,TRUE,cd,Selected Works of Pushkin,Kirk Herritt,1947,25,TRUE,Entresse Library  
 2099,112,TRUE,journal,Selections from a Sung Dynasty Poet,Dean Ketelsen,1970,25,TRUE,Hiekkaharju Library
-2095,113,TRUE,book,Shaking the Pumpkin: Traditional Poetry of the Indian FALSErth Americas,Lenna Newville,1978,0,FALSE,Hiekkaharju Library
-2115,114,TRUE,book,Shih Ching (The Book of Songs),Staci Schmaltz,1913,0,FALSE,Kallio Library 
+2095,113,TRUE,book,Shaking the Pumpkin: Traditional Poetry of the Indian FALSErth Americas,Lenna Newville,1978,20,FALSE,Hiekkaharju Library
+2115,114,TRUE,book,Shih Ching (The Book of Songs),Staci Schmaltz,1913,20,FALSE,Kallio Library 
 2064,115,TRUE,journal,Songs of the Proven?al Troubadours,Xochitl Discipio,1995,25,TRUE,Hakunila Library 
 2186,116,TRUE,book,Sources of Chinese Tradition,Janey Gabisi,1936,25,FALSE,Library Apple 
 2066,117,TRUE,book,Strange Stories from a Chinese Studio,Krissy Rauser,2004,25,TRUE,Hakunila Library 
@@ -144,12 +140,12 @@
 2003,129,TRUE,journal,The Garden Party. The Memorandum,Kristeen Turinetti,1922,25,TRUE,Arabianranta Library
 2100,130,TRUE,book,The Glass Bead Game (Magister Ludi),Levi Munis,1944,25,TRUE,Hiekkaharju Library
 2015,131,TRUE,journal,The Golden Ass or The Transformations of Lucius,Cherry Lietz,1938,25,TRUE,Arabianranta Library
-2087,132,TRUE,book,The Histories of Gargantua and Pantagruel,Galen Cantres,1934,0,FALSE,Hiekkaharju Library
+2087,132,TRUE,book,The Histories of Gargantua and Pantagruel,Galen Cantres,1934,20,FALSE,Hiekkaharju Library
 2039,133,TRUE,cd,The History of the Decline and Fall of the Roman Empire,Dulce Labreche,1904,25,TRUE,Entresse Library  
 2101,134,TRUE,book,The Interpretation of Dreams,Sylvie Ryser,2004,25,TRUE,Hiekkaharju Library
 2046,135,TRUE,journal,The Late Mattia Pascal. Six Characters in Search of an Author,Lavonna Wolny,1984,25,TRUE,Entresse Library  
-2150,136,TRUE,book,The Life and Strange Surprising Adventures of Robert Crusoe of York,,,,,
-2157,137,TRUE,cd,The Life and Works of Jahiz,Elli Mclaird,1957,0,FALSE,Lauttasaari Library  
+2150,136,TRUE,book,The Life and Strange Surprising Adventures of Robert Crusoe of York,,2000,20,TRUE,Entresse Library  
+2157,137,TRUE,cd,The Life and Works of Jahiz,Elli Mclaird,1957,20,FALSE,Lauttasaari Library  
 2013,138,TRUE,book,The Love Department,Raina Brachle,1926,25,TRUE,Arabianranta Library
 2080,139,TRUE,cd,The Lusiads,Jaclyn Bachman,1900,25,TRUE,Hakunila Library 
 2079,140,TRUE,book,The Makioka Sisters,Markus Lukasik,1944,25,TRUE,Hakunila Library 
@@ -157,43 +153,43 @@
 2048,142,TRUE,journal,The New Life,Mariann Bilden,1928,25,TRUE,Entresse Library  
 2057,142,TRUE,journal,The New Life,Mariann Bilden,1931,25,TRUE,Entresse Library  
 2067,142,TRUE,journal,The New Life,Mariann Bilden,1939,25,TRUE,Hakunila Library 
-2002,143,TRUE,book,The Old Testament,Tresa Sweely,1945,0,FALSE,Arabianranta Library
+2002,143,TRUE,book,The Old Testament,Tresa Sweely,1945,20,FALSE,Arabianranta Library
 2108,144,TRUE,book,The Penguin Book of Greek Verse,Hubert Walthall,1920,25,TRUE,Kallio Library 
 2030,145,TRUE,book,The Penguin Book of Latin Verse,Jerry Dallen,1938,25,FALSE,Entresse Library  
-2167,146,TRUE,cd,The Penguin Book of Russian Verse,Ruthann Keener,2011,0,FALSE,Lauttasaari Library  
+2167,146,TRUE,cd,The Penguin Book of Russian Verse,Ruthann Keener,2011,20,FALSE,Lauttasaari Library  
 2074,147,TRUE,book,The Penguin Book of Spanish Verse,Izetta Funnell,1983,25,TRUE,Hakunila Library 
 2018,148,TRUE,journal,The Penguin Complete Sherlock Holmes,Whitley Tomasulo,1958,25,TRUE,Arabianranta Library
 2090,149,TRUE,cd,The Presocratic Philosophers: A Critical History with a Selection of Texts,Dalene Schoeneck,1932,25,TRUE,Hiekkaharju Library
-2187,150,TRUE,book,The Quest of the Holy Grail ,Lili Paskin,1989,0,FALSE,Library Apple 
+2187,150,TRUE,book,The Quest of the Holy Grail ,Lili Paskin,1989,20,FALSE,Library Apple 
 2049,151,TRUE,book,The Red and the Black,Helene Rodenberger,1999,25,TRUE,Entresse Library  
 2114,152,TRUE,book,The Republic,Bernardine Rodefer,1993,25,TRUE,Kallio Library 
 2063,153,TRUE,book,The Rogue of Seville,Kasandra Semidey,2001,25,TRUE,Hakunila Library 
 2144,154,TRUE,book,The Roman Sonnets,Shonda Greenbush,2003,25,TRUE,Lauttasaari Library  
 2022,155,TRUE,book,The Secret Agent. Under Western Eyes,Caitlin Julia,1970,25,TRUE,Entresse Library  
-2082,156,TRUE,cd,The Sin of Father Amaro. Dragon's Teeth. The Maias,Gayla Schnitzler,1906,0,FALSE,Hiekkaharju Library
+2082,156,TRUE,cd,The Sin of Father Amaro. Dragon's Teeth. The Maias,Gayla Schnitzler,1906,20,FALSE,Hiekkaharju Library
 2102,157,TRUE,journal,The Spanish Bawd (Celestina),Sharee Maile,1927,25,TRUE,Kallio Library 
 2081,158,TRUE,book,The Story of a Life,Cyril Daufeldt,1954,25,TRUE,Hiekkaharju Library
 2007,159,TRUE,book,The Story of Art,Ligia Reiber,1915,25,TRUE,Arabianranta Library
 2014,159,TRUE,book,The Story of Art,Ligia Reiber,1959,25,FALSE,Arabianranta Library
-2180,160,TRUE,book,The Story of Modern Art,Rasheeda Sayaphon,1919,0,FALSE,Lauttasaari Library  
-2160,161,TRUE,cd,The Story of Sinuhe,Nu Mcnease,1998,0,FALSE,Lauttasaari Library  
+2180,160,TRUE,book,The Story of Modern Art,Rasheeda Sayaphon,1919,20,FALSE,Lauttasaari Library  
+2160,161,TRUE,cd,The Story of Sinuhe,Nu Mcnease,1998,20,FALSE,Lauttasaari Library  
 2161,162,TRUE,book,The Story of Sinuhe,Nu Mcnease,1968,25,TRUE,Lauttasaari Library  
 2021,163,TRUE,book,The Stranger. The Plague. The Fall,Jesusita Flister,1906,25,FALSE,Entresse Library  
 2043,164,TRUE,book,The Tartar Steppe,Lashawnda Stuer,1981,25,TRUE,Entresse Library  
 2198,165,TRUE,book,The Texts of Taoism,Brittni Gillaspie,1956,25,TRUE,Saunalahti Library 
 2097,166,TRUE,book,The Thinking Eye. The Nature of Nature,Mireya Frerking,1981,25,TRUE,Hiekkaharju Library
 2132,167,TRUE,book,The Vicar of Wakefield. She Stoops to Conquer. The Deserted Village,Selma Husser,1921,25,TRUE,Kauniainen library 
-2041,168,TRUE,book,Three Comedies: Mine Hostess,,,,,
+2041,168,TRUE,book,Three Comedies: Mine Hostess,Eden Jayson,1990,20,TRUE,Malmi Library 
 2192,169,TRUE,book,Three Tragedies,Lawrence Lorens,1957,25,TRUE,Malmi Library 
 2152,170,TRUE,book,Thus Spoke Zarathustra ,Jacqueline Rowling,1926,25,TRUE,Lauttasaari Library  
-2119,171,TRUE,book,Tragedies,Eden Jayson,2003,0,FALSE,Kallio Library 
+2119,171,TRUE,book,Tragedies,Eden Jayson,2003,20,FALSE,Kallio Library 
 2125,171,TRUE,book,Tragedies,Eden Jayson,1917,25,TRUE,Kauniainen library 
 2173,172,TRUE,book,Travels,Jess Chaffins,1922,25,TRUE,Lauttasaari Library  
 2169,173,TRUE,book,War and Peace,Vi Rentfro,1917,25,TRUE,Lauttasaari Library  
 2092,174,TRUE,book,Water Margin,Lizbeth Kohl,1934,25,TRUE,Hiekkaharju Library
 2142,175,TRUE,book,Works,Quentin Swayze,1955,25,TRUE,Kauniainen library 
-2196,175,TRUE,book,Works,Quentin Swayze,1983,0,FALSE,Malmi Library 
-2121,176,TRUE,book,Writings,Merissa Tomblin,1947,0,FALSE,Kauniainen library 
+2196,175,TRUE,book,Works,Quentin Swayze,1983,20,FALSE,Malmi Library 
+2121,176,TRUE,book,Writings,Merissa Tomblin,1947,20,FALSE,Kauniainen library 
 2122,176,TRUE,book,Writings,Merissa Tomblin,1972,25,TRUE,Kauniainen library 
 2036,177,TRUE,book,Wuthering Heights,Winfred Brucato,1973,25,TRUE,Entresse Library  
 2172,178,TRUE,book,Yogasutra,Ryan HarFALSEs,1928,25,FALSE,Lauttasaari Library  

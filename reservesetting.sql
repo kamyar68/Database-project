@@ -29,30 +29,3 @@ delete from reserve where RID= NEW.RID;
 update reserve set quepos=quepos-1 where GID=old.GID;
 END;
 
-
-/* Create trigger autoloan
-after update of available on items
-when (new.available)
-begin
-insert into loans values (1111, 12345,12345,'1999-12-12',2222);
-update loans set CID= (select CID from reserve where quepos=1 and GID=NEW.GID) where CID=12345;
-update loans set IID=NEW.IID where IID=12345;
-delete from reserve where RID= NEW.RID;
-update reserve set quepos=quepos-1 where GID=old.GID;
-END; */
-
-/* Create trigger moveque
-after delete on reserve
-for each row
-begin
-update reserve set quepos=quepos-1 where GID=old.GID;
-end;
-
-create Trigger queTOloan
-after update of quepos on reserve
-for each row
-begin
-when (NEW.quepos=0) 
-delete from reserve where RID= NEW.RID;
-insert into loans (1111, NEW.IID,NEW.CID,'1999-12-12',2222);
-end; */

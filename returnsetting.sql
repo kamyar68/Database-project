@@ -7,10 +7,16 @@ update items set available=TRUE where IID= (select IID from loans where loans.lo
 end;
 
 
+
 create trigger ret2
 after insert on returning
 for each row
-when(((SELECT date('now')) - (select Sdate from loans where loanID=NEW.loanID))> (select loanduration from items where IID=(select IID from loans where loanID=NEW.loanID)))
+when(((SELECT julianday(date('now'))) - (select Sdate from loans where loanID=NEW.loanID))> (select loanduration from items where IID=(select IID from loans where loanID=NEW.loanID)))
 begin
 insert into fee values('Reservation',NEW.loanID,1*((retdate - (select Sdate from loans where loans.loandID=NEW.loanID)) - (select loanduration from items where IID= (select IID from loans where loans.loanID=NEW.loanID))),'Pending');
 end;
+
+
+-- when((select julianday('now') - julianday(select Sdate from loans where loanID=NEW.loanID))>(select loanduration from items where IID=(select IID from loans where loanID=NEW.loanID)))
+
+--(select julianday('now')- julianday(select Sdate from loans where loans.loandID=NEW.loanID)) - (select loanduration from items where IID= (select IID from loans where loans.loanID=NEW.loanID)) 
