@@ -20,12 +20,12 @@ update reserve set quepos=((Select count (*) from reserve where reserve.GID=NEW.
 insert into fee values('Reservation',NEW.RID,1,'Pending');
 end;
 
-Create trigger autoloan
+/* Create trigger autoloan
 after update of available on items
 when (new.available)
 begin
 insert into loans values (1111, NEW.IID,(select CID from reserve where quepos=1 and GID=NEW.GID),'1999-12-12',2222);
 delete from reserve where RID= NEW.RID;
 update reserve set quepos=quepos-1 where GID=old.GID;
-END;
+END; */
 

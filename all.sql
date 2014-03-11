@@ -58,7 +58,7 @@ PRIMARY KEY (loanID)
 CREATE trigger loansetting1
 after insert on loans
 for each row 
-WHEN (NOT(Select available from items where items.IID=NEW.IID))
+WHEN (NOT(Select available from items where IID=NEW.IID))
 begin
 delete from loans where IID= NEW.IID AND CID=NEW.CID;
 end;
@@ -69,7 +69,7 @@ for each row
 WHEN (SELECT available from items where items.IID=NEW.IID)
 begin
 update loans set Sdate=(SELECT date('now')) where CID=NEW.CID and IID=NEW.IID;
-update loans set Ddate= (select date(julianday(NEW.Sdate), +(select loanduration from items where items.IID=NEW.IID))) where CID=NEW.CID and IID=NEW.IID;
+update loans set Ddate= (select date(julianday('now')+(select loanduration from items where items.IID=NEW.IID))) where CID=NEW.CID and IID=NEW.IID;
 update loans set loanID=((Select count (*) from loans)+1) where CID=NEW.CID and IID=NEW.IID;
 update items set available= FALSE where items.IID=NEW.IID;
 end;
@@ -96,14 +96,14 @@ update reserve set quepos=((Select count (*) from reserve where reserve.GID=NEW.
 insert into fee values('Reservation',NEW.RID,1,'Pending');
 end;
 
-Create trigger autoloan
+/* Create trigger autoloan
 after update of available on items
 when (new.available)
 begin
 insert into loans values (1111, NEW.IID,(select CID from reserve where quepos=1 and GID=NEW.GID),'1999-12-12',2222);
 delete from reserve where RID= NEW.RID;
 update reserve set quepos=quepos-1 where GID=old.GID;
-END;
+END; */
 
 -- --------------------------
 create trigger ret1
@@ -118,9 +118,11 @@ end;
 create trigger ret2
 after insert on returning
 for each row
-when((round(SELECT julianday('now') - julianday(select Sdate from loans where loanID=NEW.loanID)))> (select loanduration from items where IID=(select IID from loans where loanID=NEW.loanID)))
+when(abs((select julianday('now')) - (select julianday(Sdate) from loans where loanID=NEW.loanID))> (select loanduration from items where IID=(select IID from loans where loanID=NEW.loanID)))
+
 begin
-insert into fee values('Reservation',NEW.loanID,1*((round(julianday(retdate) - julianday(select Sdate from loans where loans.loandID=NEW.loanID))) - (select loanduration from items where IID= (select IID from loans where loans.loanID=NEW.loanID))),'Pending');
+insert into fee values('Reservation',NEW.loanID,1*(abs((select julianday('now')) - (select julianday(Sdate) from loans where loans.loandID=NEW.loanID)) - (select loanduration from items where IID= (select IID from loans where loans.loanID=NEW.loanID))),'Pending');
+
 end;
 
 .mode csv

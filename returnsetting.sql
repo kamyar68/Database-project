@@ -11,11 +11,11 @@ end;
 create trigger ret2
 after insert on returning
 for each row
-when(SELECT abs(julianday('now') - julianday('date(select Sdate from loans where loanID=NEW.loanID)'))> (select loanduration from items where IID=(select IID from loans where loanID=NEW.loanID)))
---when (select abs(julianday('now')-julianday('2013-12-12'))>2)
+when(abs((select julianday('now')) - (select julianday(Sdate) from loans where loanID=NEW.loanID))> (select loanduration from items where IID=(select IID from loans where loanID=NEW.loanID)))
+
 begin
---insert into fee values('Reservation',NEW.loanID,1*((julianday('now') - julianday(select Sdate from loans where loans.loandID=NEW.loanID)) - (select loanduration from items where IID= (select IID from loans where loans.loanID=NEW.loanID))),'Pending');
-insert into fee values('Reservation',NEW.loanID,1*(select julianday('now')-julianday('2014-01-01')-10),'Pending');
+insert into fee values('Reservation',NEW.loanID,1*(abs((select julianday('now')) - (select julianday(Sdate) from loans where loans.loandID=NEW.loanID)) - (select loanduration from items where IID= (select IID from loans where loans.loanID=NEW.loanID))),'Pending');
+
 end;
 
 
