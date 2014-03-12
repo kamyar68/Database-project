@@ -3,7 +3,7 @@ after insert on returning
 for each row
 begin
 update ret set retdate=(SELECT date('now')) where loanID=NEW.loanID;
-update items set available=TRUE where IID= (select IID from loans where loans.loanID=NEW.loandID);
+update items set available=1 where IID= (select IID from loans where loans.loanID=NEW.loandID);
 end;
 
 
