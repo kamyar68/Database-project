@@ -58,7 +58,7 @@ PRIMARY KEY (loanID)
 CREATE trigger loansetting1
 after insert on loans
 for each row 
-WHEN (NOT(Select available from items where IID=NEW.IID))
+WHEN ((Select available from items where IID=NEW.IID)=0)
 begin
 delete from loans where IID= NEW.IID AND CID=NEW.CID;
 end;
@@ -66,12 +66,12 @@ end;
 create trigger loansetting2
 after insert on loans
 for each row
-WHEN (SELECT available from items where items.IID=NEW.IID)
+WHEN (1=1)
 begin
 update loans set Sdate=(SELECT date('now')) where CID=NEW.CID and IID=NEW.IID;
 update loans set Ddate= (select date(julianday('now')+(select loanduration from items where items.IID=NEW.IID))) where CID=NEW.CID and IID=NEW.IID;
 update loans set loanID=((Select count (*) from loans)+1) where CID=NEW.CID and IID=NEW.IID;
-update items set available= FALSE where items.IID=NEW.IID;
+update items set available= 0 where items.IID=NEW.IID;
 end;
 -- --------------------
 create view itemstatus as
@@ -111,7 +111,7 @@ after insert on returning
 for each row
 begin
 update ret set retdate=(SELECT date('now')) where loanID=NEW.loanID;
-update items set available=TRUE where IID= (select IID from loans where loans.loanID=NEW.loandID);
+update items set available=1 where IID= (select IID from loans where loans.loanID=NEW.loandID);
 end;
 
 
