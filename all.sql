@@ -30,6 +30,7 @@ IID INT REFERENCES items(IID),
 CID INT REFERENCES customers(CID),
 Sdate DATE,
 Ddate DATE,
+returned boolean,
 PRIMARY KEY (loanID) 
 );
 CREATE TABLE reserve (
@@ -55,35 +56,29 @@ retlib CHAR (50) REFERENCES library(retlib),
 PRIMARY KEY (loanID)
 );
 -- ---------------
-CREATE trigger loansetting1
-after insert on loans
-for each row 
-WHEN ((Select available from items where IID=NEW.IID)=0)
-begin
-delete from loans where IID= NEW.IID AND CID=NEW.CID;
-end;
-
 create trigger loansetting2
 after insert on loans
 for each row
-WHEN (1=1)
+/* WHEN ((Select available from items where IID=NEW.IID)=1) */
 begin
-update loans set Sdate=(SELECT date('now')) where CID=NEW.CID and IID=NEW.IID;
-update loans set Ddate= (select date(julianday('now')+(select loanduration from items where items.IID=NEW.IID))) where CID=NEW.CID and IID=NEW.IID;
-update loans set loanID=((Select count (*) from loans)+1) where CID=NEW.CID and IID=NEW.IID;
-update items set available= 0 where items.IID=NEW.IID;
+delete from loans where IID= NEW.IID AND CID=NEW.CID and ((Select available from items where IID=NEW.IID)=0);
+update loans set Sdate=(SELECT date('now')) where CID=NEW.CID and IID=NEW.IID AND ((Select available from items where IID=NEW.IID)=1);
+update loans set Ddate= (select date(julianday('now')+(select loanduration from items where items.IID=NEW.IID))) where CID=NEW.CID and IID=NEW.IID and ((Select available from items where IID=NEW.IID)=1);
+update loans set loanID=((Select count (*) from loans)) where CID=NEW.CID and IID=NEW.IID and ((Select available from items where IID=NEW.IID)=1);
+update items set available= 0 where items.IID=NEW.IID and ((select returned from loans where IID=new.IID)=0);
 end;
 -- --------------------
 create view itemstatus as
 select GID, reservable
 from items;
-
 create trigger rs1
 after insert on reserve
 for each row
-WHEN ((Select reservable from itemstatus where itemstatus.GID=NEW.GID)=0) 
+when ((Select reservable from itemstatus where items.GID=NEW.GID)=1)
 begin
-delete from reserve where GID= NEW.GID AND CID=NEW.CID;
+update reserve set RID=((Select count (*) from reserve)+1) where CID=NEW.CID and GID=NEW.GID and ((Select reservable from itemstatus where items.GID=NEW.GID)=1);
+update reserve set quepos=((Select count (*) from reserve where reserve.GID=NEW.GID)) where CID=NEW.CID and GID=NEW.GID and ((Select reservable from itemstatus where items.GID=NEW.GID)=1);
+delete from reserve where GID= NEW.GID AND CID=NEW.CID and ((Select reservable from itemstatus where itemstatus.GID=NEW.GID)=0);
 end;
 
 create trigger rs2
@@ -91,19 +86,8 @@ after insert on reserve
 for each row
 when ((Select reservable from itemstatus where items.GID=NEW.GID)=1)
 begin
-update reserve set RID=((Select count (*) from reserve)+1) where CID=NEW.CID and GID=NEW.GID;
-update reserve set quepos=((Select count (*) from reserve where reserve.GID=NEW.GID)) where CID=NEW.CID and GID=NEW.GID;
 insert into fee values('Reservation',NEW.RID,1,'Pending');
 end;
-
-Create trigger autoloan
-after update of available on items
-when ((new.available=1) and (NEW.GID in (select GID from reserve)))
-begin
-insert into loans values (1111, NEW.IID,(select CID from reserve where quepos=1 and GID=NEW.GID),'1999-12-12',2222);
-delete from reserve where RID= NEW.RID;
-update reserve set quepos=quepos-1 where GID=old.GID;
-END;
 
 
 
@@ -125,8 +109,11 @@ when(abs((select julianday('now')) - (select julianday(Sdate) from loans where l
 
 begin
 insert into fee values('Reservation',NEW.loanID,1*(abs((select julianday('now')) - (select julianday(Sdate) from loans where loans.loandID=NEW.loanID)) - (select loanduration from items where IID= (select IID from loans where loans.loanID=NEW.loanID))),'Pending');
-
+update loans set returned=1 where loans.loanID=NEW.loanID;
 end;
+
+
+
 
 .mode csv
 .import items.csv items

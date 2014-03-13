@@ -15,7 +15,7 @@ when(abs((select julianday('now')) - (select julianday(Sdate) from loans where l
 
 begin
 insert into fee values('Reservation',NEW.loanID,1*(abs((select julianday('now')) - (select julianday(Sdate) from loans where loans.loandID=NEW.loanID)) - (select loanduration from items where IID= (select IID from loans where loans.loanID=NEW.loanID))),'Pending');
-
+update loans set returned=1 where loans.loanID=NEW.loanID;
 end;
 
 

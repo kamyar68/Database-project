@@ -30,6 +30,7 @@ IID INT REFERENCES items(IID),
 CID INT REFERENCES customers(CID),
 Sdate DATE,
 Ddate DATE,
+returned boolean;
 PRIMARY KEY (loanID) 
 );
 CREATE TABLE reserve (
