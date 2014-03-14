@@ -71,24 +71,25 @@ end;
 create view itemstatus as
 select GID, reservable
 from items;
+
 create trigger rs1
 after insert on reserve
 for each row
-when ((Select reservable from itemstatus where items.GID=NEW.GID)=1)
 begin
-update reserve set RID=((Select count (*) from reserve)+1) where CID=NEW.CID and GID=NEW.GID and ((Select reservable from itemstatus where items.GID=NEW.GID)=1);
-update reserve set quepos=((Select count (*) from reserve where reserve.GID=NEW.GID)) where CID=NEW.CID and GID=NEW.GID and ((Select reservable from itemstatus where items.GID=NEW.GID)=1);
-delete from reserve where GID= NEW.GID AND CID=NEW.CID and ((Select reservable from itemstatus where itemstatus.GID=NEW.GID)=0);
+update reserve set RID=(Select count (*) from reserve) where CID=NEW.CID and GID=NEW.GID;
+update reserve set quepos=((Select count (*) from reserve where GID=NEW.GID)) where CID=NEW.CID and GID=NEW.GID and ((Select reservable from itemstatus where GID=NEW.GID)=1);
+update reserve set resdate = (Select date('now')) where CID=NEW.CID and GID=NEW.GID;
+delete from reserve where GID= NEW.GID AND CID=NEW.CID and ((Select reservable from itemstatus where GID=NEW.GID)=0);
 end;
+
 
 create trigger rs2
 after insert on reserve
 for each row
-when ((Select reservable from itemstatus where items.GID=NEW.GID)=1)
+when ((Select reservable from itemstatus where GID=NEW.GID)=1)
 begin
-insert into fee values('Reservation',NEW.RID,1,'Pending');
+insert into fee values('Reservation', (Select count (*) from reserve),1,'pending');
 end;
-
 
 
 -- --------------------------
@@ -108,7 +109,7 @@ for each row
 when(abs((select julianday('now')) - (select julianday(Sdate) from loans where loanID=NEW.loanID))> (select loanduration from items where IID=(select IID from loans where loanID=NEW.loanID)))
 
 begin
-insert into fee values('Reservation',NEW.loanID,1*(abs((select julianday('now')) - (select julianday(Sdate) from loans where loans.loandID=NEW.loanID)) - (select loanduration from items where IID= (select IID from loans where loans.loanID=NEW.loanID))),'Pending');
+insert into fee values('Delayed return',NEW.loanID,1*(abs((select julianday('now')) - (select julianday(Sdate) from loans where loans.loandID=NEW.loanID)) - (select loanduration from items where IID= (select IID from loans where loans.loanID=NEW.loanID))),'Pending');
 update loans set returned=1 where loans.loanID=NEW.loanID;
 end;
 
